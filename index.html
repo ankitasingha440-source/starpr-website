@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>StarPR Solution</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="brand">
+    <img src="assets/logo.png" id="logo" alt="StarPR Logo">
+    <div class="brand-text">
+      <h1>StarPR Solution</h1>
+      <p>PR & Integrated Marketing</p>
+    </div>
+  </div>
+  <nav class="nav">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#team">Team</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="controls">
+    <button id="editToggle" class="btn ghost">✏️ Edit Mode</button>
+    <button id="saveBtn" class="btn primary">💾 Save</button>
+  </div>
+</header>
+
+<main id="home">
+  <section class="hero">
+    <div class="hero-content">
+      <h2 contenteditable="false" id="hero-title">Launch your brand to the <span class="highlight">next level</span></h2>
+      <p contenteditable="false" id="hero-sub">StarPR Solution helps crypto, NFT and blockchain projects get high-authority media placements, organic traffic growth and measurable PR that moves the needle.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#services">Our Services</a>
+        <a class="btn ghost" href="#about">Why Us</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="assets/logo.png" alt="Logo">
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <h3 contenteditable="false">Why StarPR Solution</h3>
+    <p contenteditable="false" id="about-text">We combine creative storytelling with targeted placements — focusing on ROI and long-term brand authority.</p>
+  </section>
+
+  <section id="services" class="section">
+    <h3 contenteditable="false">Our Services</h3>
+    <div class="grid services-grid">
+      <div class="card" data-key="service1">
+        <h4 contenteditable="false">SEO & Link Building</h4>
+        <p contenteditable="false">Technical SEO + editorial backlinks to improve rankings and organic visibility.</p>
+      </div>
+      <div class="card" data-key="service2">
+        <h4 contenteditable="false">Content Creation</h4>
+        <p contenteditable="false">Blog articles, press releases and thought-leadership content tailored to your audience.</p>
+      </div>
+      <div class="card" data-key="service3">
+        <h4 contenteditable="false">Guest Posting</h4>
+        <p contenteditable="false">Placement on niche and mainstream publications to build authority and traffic.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="team" class="section">
+    <h3 contenteditable="false">Our Team</h3>
+    <div class="grid team-grid">
+      <div class="card team-card" data-key="member1">
+        <div class="avatar"><img src="assets/avatars/avatar1.svg" alt=""></div>
+        <strong contenteditable="false">Rup Narayan Chatterjee</strong>
+        <div class="muted" contenteditable="false">Founder</div>
+      </div>
+      <div class="card team-card" data-key="member2">
+        <div class="avatar"><img src="assets/avatars/avatar2.svg" alt=""></div>
+        <strong contenteditable="false">Malay Ghosh</strong>
+        <div class="muted" contenteditable="false">CEO</div>
+      </div>
+      <div class="card team-card" data-key="member3">
+        <div class="avatar"><img src="assets/avatars/avatar3.svg" alt=""></div>
+        <strong contenteditable="false">Rakhit Mondal</strong>
+        <div class="muted" contenteditable="false">Manager</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h3 contenteditable="false">Contact</h3>
+    <div class="contact-grid">
+      <div class="contact-info card">
+        <div><strong>Phone:</strong> <a id="phoneLink" href="tel:+917047626036">+91 70476 26036</a></div>
+        <div><strong>Email:</strong> <a id="emailLink" href="mailto:info@starprsolution.com">info@starprsolution.com</a></div>
+        <div><strong>Telegram:</strong> <a id="telegramLink" href="#" target="_blank">(not set)</a></div>
+      </div>
+      <form class="card contact-form" onsubmit="event.preventDefault(); alert('Demo: message submitted.')">
+        <input placeholder="Your name" required>
+        <input placeholder="Email" required>
+        <input placeholder="Phone">
+        <textarea placeholder="Tell us about your project" rows="5"></textarea>
+        <div style="display:flex;gap:8px;justify-content:flex-end">
+          <button type="submit" class="btn ghost">Send Message</button>
+          <button type="button" class="btn primary">Start Project</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap"><small>© <span id="year"></span> StarPR Solution — Designed with ❤️</small></div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
