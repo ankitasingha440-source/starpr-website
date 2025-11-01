@@ -1,227 +1,119 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <!-- ====== SEO & Meta ====== -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>StarPR Solution — PR & Digital Marketing</title>
-  <meta name="description" content="StarPR Solution offers PR, SEO, content writing and digital marketing solutions. Boost your brand with creative PR & digital marketing." />
-  <meta name="author" content="StarPR Solution" />
-  <meta property="og:title" content="StarPR Solution" />
-  <meta property="og:description" content="PR, SEO, content writing and digital marketing solutions." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="logo.png" />
-  <meta name="theme-color" content="#0f1724" />
-
-  <!-- FAVICON / LOGO -->
-  <!-- logo.png should be in the same folder as this index.html (or change path) -->
-  <link rel="icon" type="image/png" href="logo.png" />
-
-  <!-- BASIC STYLES (small) -->
-  <style>
-    :root{
-      --bg:#071021;
-      --card:#0b1b2b;
-      --accent:#3fc4ff;
-      --muted:#9aa8b3;
-      --glass: rgba(255,255,255,0.03);
-      --card-glow: rgba(63,196,255,0.08);
-      --radius:14px;
-      --maxw:1100px;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background: linear-gradient(180deg,#041022 0%, #07162b 100%);
-      color:#e6f0f6;
-      -webkit-font-smoothing:antialiased;
-    }
-    a{color:var(--accent); text-decoration:none}
-    .container{max-width:var(--maxw); margin:0 auto; padding:40px 20px;}
-
-    /* Header / Hero */
-    header.site-header{padding:40px 0; text-align:center}
-    .brand{display:flex; gap:16px; align-items:center; justify-content:center}
-    .brand img{height:80px; width:80px; object-fit:contain; border-radius:12px; box-shadow:0 8px 30px rgba(0,0,0,0.6);}
-    .brand h1{margin:0; font-size:36px; letter-spacing:0.6px}
-    .brand p{margin:6px 0 0; color:var(--muted)}
-
-    /* Navigation (simple) */
-    nav.nav{display:flex; gap:12px; justify-content:center; margin-top:18px}
-    nav a{padding:8px 14px; border-radius:8px; color:var(--muted); background:transparent}
-    nav a:hover{background:rgba(255,255,255,0.02); color:#fff; transform:translateY(-1px)}
-
-    /* Hire Us Card */
-    .hire-card{
-      margin:40px auto;
-      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      border-radius:var(--radius);
-      padding:34px;
-      box-shadow:0 6px 28px rgba(3,7,17,0.6);
-      border:1px solid rgba(255,255,255,0.03);
-      max-width:880px;
-      transform:translateY(0);
-      transition:transform .6s cubic-bezier(.16,.84,.44,1);
-      position:relative;
-      overflow:hidden;
-    }
-    .hire-card .title{font-size:22px; color:#e6fbff}
-    .hire-card p{color:var(--muted); line-height:1.6}
-    .hire-cta{display:flex; gap:12px; align-items:center; margin-top:18px}
-    .btn{background:var(--accent); color:#051424; padding:12px 18px; border-radius:10px; font-weight:600; box-shadow:0 8px 24px rgba(63,196,255,0.08); cursor:pointer; border:0}
-    .btn.secondary{background:transparent; color:var(--muted); border:1px solid rgba(255,255,255,0.04)}
-
-    /* subtle floating animation */
-    .float-anim{animation:floatY 6s ease-in-out infinite}
-    @keyframes floatY{0%{transform:translateY(0)}50%{transform:translateY(-10px)}100%{transform:translateY(0)}}
-
-    /* Contact form */
-    form.contact{display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:20px}
-    form.contact input, form.contact textarea{
-      background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.04);
-      padding:12px; border-radius:10px; color:#e9fbff; outline:none;
-    }
-    form.contact textarea{grid-column:1 / -1; min-height:120px; resize:vertical}
-    .form-row{display:flex; gap:12px}
-    .note{color:var(--muted); font-size:13px; margin-top:8px}
-
-    /* Footer */
-    footer{padding:40px 0; color:var(--muted); text-align:center; font-size:14px}
-
-    /* Responsive */
-    @media (max-width:720px){
-      .brand img{height:64px; width:64px}
-      .brand h1{font-size:28px}
-      form.contact{grid-template-columns:1fr; margin-top:14px}
-      .hire-card{padding:20px}
-    }
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>StarPR Solution</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
+<header class="site-header">
+  <div class="brand">
+    <img src="assets/logo.png" id="logo" alt="StarPR Logo">
+    <div class="brand-text">
+      <h1>StarPR Solution</h1>
+      <p>PR & Integrated Marketing</p>
+    </div>
+  </div>
+  <nav class="nav">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#team">Team</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="controls">
+    <button id="editToggle" class="btn ghost">✏️ Edit Mode</button>
+    <button id="saveBtn" class="btn primary">💾 Save</button>
+  </div>
+</header>
 
-  <div class="container">
-    <header class="site-header">
-      <div class="brand">
-        <!-- Logo: ensure logo.png uploaded in repo root -->
-        <img src="logo.png" alt="StarPR Logo" class="float-anim" />
-        <div>
-          <h1>StarPR Solution</h1>
-          <p>Boost your brand with our creative PR & digital marketing services</p>
-        </div>
+<main id="home">
+  <section class="hero">
+    <div class="hero-content">
+      <h2 contenteditable="false" id="hero-title">Launch your brand to the <span class="highlight">next level</span></h2>
+      <p contenteditable="false" id="hero-sub">StarPR Solution helps crypto, NFT and blockchain projects get high-authority media placements, organic traffic growth and measurable PR that moves the needle.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#services">Our Services</a>
+        <a class="btn ghost" href="#about">Why Us</a>
       </div>
+    </div>
+    <div class="hero-image">
+      <img src="assets/logo.png" alt="Logo">
+    </div>
+  </section>
 
-      <nav class="nav" style="margin-top:18px">
-        <a href="#hire">Hire Us</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+  <section id="about" class="section">
+    <h3 contenteditable="false">Why StarPR Solution</h3>
+    <p contenteditable="false" id="about-text">We combine creative storytelling with targeted placements — focusing on ROI and long-term brand authority.</p>
+  </section>
 
-    <!-- Hire Us Card -->
-    <section id="hire">
-      <div class="hire-card" id="hireCard">
-        <div class="title">Hire Us 🚀</div>
-        <p>We create SEO-optimized content, press releases, media websites and full digital marketing campaigns that help your brand rank and shine online. Need a custom media site or press release? Let's make it happen.</p>
-
-        <div class="hire-cta">
-          <button class="btn" id="hireBtn">Let's Connect</button>
-          <button class="btn secondary" id="scrollContact">Contact Us</button>
-        </div>
-
-        <div class="note">We can add custom packages, reporting and campaign roadmaps — ask us for a quote!</div>
+  <section id="services" class="section">
+    <h3 contenteditable="false">Our Services</h3>
+    <div class="grid services-grid">
+      <div class="card" data-key="service1">
+        <h4 contenteditable="false">SEO & Link Building</h4>
+        <p contenteditable="false">Technical SEO + editorial backlinks to improve rankings and organic visibility.</p>
       </div>
-    </section>
-
-    <!-- Services (simple placeholder) -->
-    <section id="services" style="margin-top:36px;">
-      <h2 style="text-align:center; margin-bottom:18px">What we offer</h2>
-      <div style="display:grid; gap:12px; grid-template-columns:repeat(auto-fit,minmax(220px,1fr));">
-        <div style="background:var(--card); padding:18px; border-radius:12px;">
-          <h3>SEO & Content</h3><p style="color:var(--muted)">SEO optimized articles, on-page SEO, keyword strategy.</p>
-        </div>
-        <div style="background:var(--card); padding:18px; border-radius:12px;">
-          <h3>PR & Outreach</h3><p style="color:var(--muted)">Press releases, journalist outreach, media placement.</p>
-        </div>
-        <div style="background:var(--card); padding:18px; border-radius:12px;">
-          <h3>Website & Design</h3><p style="color:var(--muted)">Landing pages, custom media sites, responsive design.</p>
-        </div>
+      <div class="card" data-key="service2">
+        <h4 contenteditable="false">Content Creation</h4>
+        <p contenteditable="false">Blog articles, press releases and thought-leadership content tailored to your audience.</p>
       </div>
-    </section>
+      <div class="card" data-key="service3">
+        <h4 contenteditable="false">Guest Posting</h4>
+        <p contenteditable="false">Placement on niche and mainstream publications to build authority and traffic.</p>
+      </div>
+    </div>
+  </section>
 
-    <!-- Contact Form -->
-    <section id="contact" style="margin-top:36px;">
-      <h2 style="text-align:center">Contact Us</h2>
-      <form class="contact" id="contactForm" method="POST" action="https://formspree.io/f/YOUR_FORM_ID">
-        <!-- Replace the action with your Formspree endpoint or use mailto: -->
-        <input type="text" name="name" placeholder="Full name" required />
-        <input type="email" name="email" placeholder="Email address" required />
-        <input type="text" name="company" placeholder="Company (optional)" />
-        <textarea name="message" placeholder="Tell us about your project..." required></textarea>
-        <div style="grid-column:1 / -1; display:flex; gap:12px; align-items:center;">
-          <button type="submit" class="btn">Send Message</button>
-          <div class="note">Or email us at <a href="mailto:info@starprsolution.com">info@starprsolution.com</a></div>
+  <section id="team" class="section">
+    <h3 contenteditable="false">Our Team</h3>
+    <div class="grid team-grid">
+      <div class="card team-card" data-key="member1">
+        <div class="avatar"><img src="assets/avatars/avatar1.svg" alt=""></div>
+        <strong contenteditable="false">Rup Narayan Chatterjee</strong>
+        <div class="muted" contenteditable="false">Founder</div>
+      </div>
+      <div class="card team-card" data-key="member2">
+        <div class="avatar"><img src="assets/avatars/avatar2.svg" alt=""></div>
+        <strong contenteditable="false">Malay Ghosh</strong>
+        <div class="muted" contenteditable="false">CEO</div>
+      </div>
+      <div class="card team-card" data-key="member3">
+        <div class="avatar"><img src="assets/avatars/avatar3.svg" alt=""></div>
+        <strong contenteditable="false">Rakhit Mondal</strong>
+        <div class="muted" contenteditable="false">Manager</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h3 contenteditable="false">Contact</h3>
+    <div class="contact-grid">
+      <div class="contact-info card">
+        <div><strong>Phone:</strong> <a id="phoneLink" href="tel:+917047626036">+91 70476 26036</a></div>
+        <div><strong>Email:</strong> <a id="emailLink" href="mailto:info@starprsolution.com">info@starprsolution.com</a></div>
+        <div><strong>Telegram:</strong> <a id="telegramLink" href="#" target="_blank">(not set)</a></div>
+      </div>
+      <form class="card contact-form" onsubmit="event.preventDefault(); alert('Demo: message submitted.')">
+        <input placeholder="Your name" required>
+        <input placeholder="Email" required>
+        <input placeholder="Phone">
+        <textarea placeholder="Tell us about your project" rows="5"></textarea>
+        <div style="display:flex;gap:8px;justify-content:flex-end">
+          <button type="submit" class="btn ghost">Send Message</button>
+          <button type="button" class="btn primary">Start Project</button>
         </div>
       </form>
-    </section>
+    </div>
+  </section>
 
-    <footer>
-      © <span id="year"></span> StarPR Solution — All rights reserved.
-    </footer>
-  </div>
+</main>
 
-  <!-- Minimal JS: smooth scroll, CTA behavior, form submit handling -->
-  <script>
-    // set year
-    document.getElementById('year').textContent = new Date().getFullYear();
+<footer>
+  <div class="wrap"><small>© <span id="year"></span> StarPR Solution — Designed with ❤️</small></div>
+</footer>
 
-    // smooth scroll for nav & buttons
-    document.querySelectorAll('a[href^="#"], #scrollContact, #hireBtn').forEach(el=>{
-      el.addEventListener('click', (e)=>{
-        e.preventDefault();
-        let target;
-        if(el.id === 'hireBtn') target = document.getElementById('hire');
-        else if(el.id === 'scrollContact') target = document.getElementById('contact');
-        else target = document.querySelector(el.getAttribute('href'));
-        if(target){
-          target.scrollIntoView({behavior:'smooth', block:'start'});
-        }
-      });
-    });
-
-    // little entrance animation for hire card
-    window.addEventListener('load', ()=>{
-      const card = document.getElementById('hireCard');
-      if(card){ card.style.transform = 'translateY(-6px)'; setTimeout(()=>card.style.transform='translateY(0)',600) }
-    });
-
-    // form submit via fetch (Formspree recommended)
-    const form = document.getElementById('contactForm');
-    form.addEventListener('submit', async (e)=>{
-      // if you want JS submit handling (optional). If using Formspree action attr, browser will submit normally.
-      // Here we'll try to send using fetch to Formspree and show a simple alert on success.
-      e.preventDefault();
-      const data = new FormData(form);
-      const action = form.getAttribute('action');
-      if(!action || action.indexOf('formspree.io') === -1){
-        // fallback: normal mailto or simple alert
-        alert('Form submitted (local). Replace form action with your Formspree endpoint to enable real sending.');
-        form.reset();
-        return;
-      }
-      try{
-        const res = await fetch(action, {method:'POST', body:data, headers:{'Accept':'application/json'}});
-        if(res.ok){
-          alert('Thank you — message sent!');
-          form.reset();
-        } else {
-          alert('Oops — there was a problem sending the message.');
-        }
-      } catch(err){
-        alert('Network error. Try again later.');
-      }
-    });
-  </script>
+<script src="script.js"></script>
 </body>
 </html>
