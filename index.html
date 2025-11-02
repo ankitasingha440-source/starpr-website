@@ -7,7 +7,6 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <img src="logo.png" alt="Website Logo" style="height: 60px; float: left; margin: 10px;">
 
 <header class="site-header">
   <div class="brand">
@@ -41,7 +40,7 @@
       </div>
     </div>
     <div class="hero-image">
-      <img src="assets/logo.png" alt="Logo">
+        <img src="logo.png" alt="Website Logo" style="height: 60px; float: left; margin: 10px;">
     </div>
   </section>
 
@@ -108,34 +107,137 @@
   </div>
 </section>
 <!-- Hire Us Section End -->
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StarPR Solution | Hire Us</title>
 
-  <section id="contact" class="section">
-    <h3 contenteditable="false">Contact</h3>
-    <div class="contact-grid">
-      <div class="contact-info card">
-        <div><strong>Phone:</strong> <a id="phoneLink" href="tel:+917047626036">+91 70476 26036</a></div>
-        <div><strong>Email:</strong> <a id="emailLink" href="mailto:info@starprsolution.com">info@starprsolution.com</a></div>
-        <div><strong>Telegram:</strong> <a id="telegramLink" href="#" target="_@Rup_StarPR">https://t.me/starprsolusion</a></div>
-      </div>
-      <form class="card contact-form" onsubmit="event.preventDefault(); alert('Demo: message submitted.')">
-        <input placeholder="Your name" required>
-        <input placeholder="Email" required>
-        <input placeholder="Phone">
-        <textarea placeholder="Tell us about your project" rows="5"></textarea>
-        <div style="display:flex;gap:8px;justify-content:flex-end">
-          <button type="submit" class="btn ghost">Send Message</button>
-          <button type="button" class="btn primary">Start Project</button>
-        </div>
-      </form>
-    </div>
+  <!-- 🌟 SEO Meta Tags -->
+  <meta name="description" content="StarPR Solution offers digital marketing, PR, SEO, and content writing services. Grow your brand with us today!">
+  <meta name="keywords" content="StarPR Solution, PR agency, content writing, SEO, digital marketing, social media management">
+  <meta name="author" content="StarPR Solution">
+
+  <!-- 🌟 Favicon -->
+  <link rel="icon" href="logo.png" type="image/png" />
+
+  <!-- 🌟 CSS -->
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #101820, #1b2735);
+      color: white;
+      overflow-x: hidden;
+    }
+    header {
+      text-align: center;
+      padding: 60px 20px;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+    }
+    header h1 {
+      font-size: 3rem;
+      color: #00bcd4;
+      animation: fadeInDown 1.5s ease;
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+      line-height: 1.8;
+    }
+    .hire-us {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.08);
+      margin-top: 50px;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0, 188, 212, 0.3);
+      animation: fadeIn 2s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .hire-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 28px;
+      background: #00bcd4;
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .hire-btn:hover {
+      background: #008ba3;
+      transform: scale(1.05);
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 500px;
+      margin: 40px auto;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 25px;
+      border-radius: 12px;
+    }
+    input, textarea {
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      outline: none;
+    }
+    button {
+      padding: 12px;
+      background: #00bcd4;
+      border: none;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #0097a7;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Welcome to StarPR Solution ✨</h1>
+    <p>Boost your brand with our creative PR & digital marketing services!</p>
+  </header>
+
+  <section class="hire-us">
+    <h2>Hire Us 🚀</h2>
+    <p>We create SEO-optimized content to help your business rank higher and shine online.  
+       Need a custom media site or press release? Let’s make it happen!</p>
+    <a href="#contact" class="hire-btn">Let's Connect</a>
   </section>
 
-</main>
+  <section id="contact">
+    <h2 style="text-align:center; margin-top:60px;">Contact Us 📩</h2>
+    <form action="https://formsubmit.co/your@email.com" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
 
-<footer>
-  <div class="wrap"><small>© <span id="year"></span> StarPR Solution — Designed with ❤️</small></div>
-</footer>
-
-<script src="script.js"></script>
+  <footer style="text-align:center; padding:20px; background:rgba(255,255,255,0.05);">
+    © 2025 StarPR Solution | All rights reserved.
+  </footer>
 </body>
 </html>
+
