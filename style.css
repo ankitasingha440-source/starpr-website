@@ -249,3 +249,106 @@ footer{margin-top:28px;padding:18px;text-align:center;color:var(--muted);font-si
   filter: grayscale(0%);
   transform: scale(1.1);
 }
+/* ===== Featured In Section ===== */
+.partners-section {
+  background: #0a0a0a;
+  padding: 60px 20px;
+  text-align: center;
+  color: white;
+}
+
+.partners-section .section-title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+  color: #f5f5f5;
+}
+
+.partners-section .section-subtitle {
+  color: #aaa;
+  margin-bottom: 40px;
+}
+
+.partners-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.partners-logos img {
+  height: 50px;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.partners-logos img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* ===== Testimonials Section ===== */
+.testimonials-section {
+  padding: 80px 20px;
+  background: #111;
+  color: #fff;
+  text-align: center;
+}
+
+.testimonials-section .section-title {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.testimonial-slider {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.testimonial {
+  max-width: 300px;
+  background: #1c1c1c;
+  padding: 20px;
+  border-radius: 15px;
+  font-style: italic;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.testimonial h4 {
+  margin-top: 15px;
+  color: #ffce00;
+}
+
+/* ===== Floating Buttons ===== */
+.floating-buttons {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 1000;
+}
+
+.floating-buttons a {
+  background: #25D366;
+  color: #fff;
+  padding: 15px;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 22px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+.floating-buttons a.email-btn {
+  background: #0078d7;
+}
+
+.floating-buttons a:hover {
+  transform: scale(1.15);
+}
