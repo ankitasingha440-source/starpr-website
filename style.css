@@ -352,3 +352,41 @@ footer{margin-top:28px;padding:18px;text-align:center;color:var(--muted);font-si
 .floating-buttons a:hover {
   transform: scale(1.15);
 }
+.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.team-member {
+  background-color: #0f172a;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  width: 200px;
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+}
+
+.team-member img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.team-member h3 {
+  color: #00aaff;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.team-member p {
+  color: #ccc;
+  font-size: 14px;
+}
