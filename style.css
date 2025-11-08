@@ -390,3 +390,60 @@ footer{margin-top:28px;padding:18px;text-align:center;color:var(--muted);font-si
   color: #ccc;
   font-size: 14px;
 }
+/* === TEAM SECTION === */
+.team-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  padding: 60px 0;
+}
+
+.team-member {
+  background: linear-gradient(180deg, #0b1623 0%, #111f33 100%);
+  border-radius: 16px;
+  text-align: center;
+  padding: 30px 20px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  transition: all 0.3s ease-in-out;
+  max-width: 280px;
+}
+
+.team-member:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.team-member img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #00aaff;
+  margin-bottom: 15px;
+}
+
+.team-member h3 {
+  color: #00c6ff;
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+}
+
+.team-member p {
+  color: #b0b0b0;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .team-section {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .team-section {
+    grid-template-columns: 1fr;
+  }
+}
