@@ -352,11 +352,15 @@ footer{margin-top:28px;padding:18px;text-align:center;color:var(--muted);font-si
 .floating-buttons a:hover {
   transform: scale(1.15);
 }
-/* 🌟 TEAM SECTION STYLE 🌟 */
+/* 🌟 OUR TEAM SECTION (Centered & Balanced 2x2 Grid) 🌟 */
 .team-section {
   text-align: center;
   padding: 60px 0;
   background: #081421;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .team-section h2 {
@@ -373,16 +377,18 @@ footer{margin-top:28px;padding:18px;text-align:center;color:var(--muted);font-si
 
 .team-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 members per row */
-  gap: 2.5rem;
-  justify-items: center;
-  align-items: stretch;
-  padding: 0 50px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem 4rem;
+  justify-content: center;
+  align-items: start;
+  width: 80%;
+  max-width: 1000px;
 }
 
 @media (max-width: 768px) {
   .team-container {
-    grid-template-columns: 1fr; /* mobile view: 1 per row */
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
 }
 
@@ -395,6 +401,7 @@ footer{margin-top:28px;padding:18px;text-align:center;color:var(--muted);font-si
   transition: all 0.4s ease-in-out;
   max-width: 320px;
   border: 1px solid transparent;
+  margin: 0 auto;
 }
 
 .team-member:hover {
