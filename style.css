@@ -980,16 +980,3 @@ footer{margin-top:28px;padding:18px;text-align:center;color:var(--muted);font-si
 .team-card:hover {
   animation: floatGlow 3s ease-in-out infinite;
 }
-section {
-  padding: 80px 20px;
-  background: #111;
-  color: white;
-  border-bottom: 1px solid #333;
-  text-align: center;
-}
-
-section h2 {
-  color: #00ffff;
-  text-shadow: 0 0 10px #00ffff;
-  margin-bottom: 10px;
-}
