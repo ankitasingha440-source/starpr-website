@@ -984,33 +984,36 @@ footer{margin-top:28px;padding:18px;text-align:center;color:var(--muted);font-si
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
-  background: #0a0a0a;
+  background: #0d0d0d;
   color: #ddd;
   line-height: 1.6;
 }
 
 /* ======= Navigation Bar ======= */
 nav {
- position: fixed;
+  position: fixed;
   top: 0;
+  right: 0;
   width: 100%;
-  background: transparent;
   display: flex;
-  justify-content: center;
-  padding: 18px 0;
+  justify-content: flex-end; /* everything right side */
+  align-items: center;
+  padding: 15px 50px;
+  background: transparent;
   z-index: 1000;
-  transition: background 0.4s ease;
+  transition: background 0.4s ease, box-shadow 0.3s ease;
 }
 
 nav.scrolled {
-  background: rgba(10, 10, 10, 0.9);
+  background: rgba(10, 10, 10, 0.85);
   backdrop-filter: blur(8px);
+  box-shadow: 0 0 10px rgba(0, 229, 255, 0.2);
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 30px;
+  gap: 35px;
   margin: 0;
   padding: 0;
 }
@@ -1019,33 +1022,52 @@ nav ul li a {
   text-decoration: none;
   color: #00e5ff;
   font-weight: 500;
-  letter-spacing: 0.5px;
+  font-size: 15px;
+  letter-spacing: 0.7px;
   transition: color 0.3s, transform 0.2s;
 }
 
 nav ul li a:hover {
   color: #ffffff;
-  transform: scale(1.05);
+  transform: scale(1.08);
 }
+
+/* optional subtle underline on hover */
+nav ul li a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0;
+  background: #00e5ff;
+  transition: width 0.3s ease;
+  margin-top: 4px;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
 /* ======= Section Style ======= */
 .section {
   max-width: 900px;
   margin: 100px auto 40px auto;
+  background: rgba(20, 20, 20, 0.8);
+  border-radius: 15px;
   padding: 40px;
-  text-align: right;
-  background: transparent; /* fully transparent */
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.1);
+  text-align: center;
 }
 
 .section h3 {
   color: #00e5ff;
-  margin-bottom: 10px;
-  font-size: 1.7em;
+  margin-bottom: 15px;
+  font-size: 1.8em;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
 .section p {
-  color: #ccc;
+  color: #bbb;
   font-size: 0.95em;
 }
 
